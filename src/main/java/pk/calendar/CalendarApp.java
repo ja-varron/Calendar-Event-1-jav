@@ -1,14 +1,16 @@
 package pk.calendar;
 
+
+import org.pmw.tinylog.Configurator;
+import org.pmw.tinylog.Level;
+import org.pmw.tinylog.writers.FileWriter;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.pmw.tinylog.Configurator;
-import org.pmw.tinylog.Level;
-import org.pmw.tinylog.writers.FileWriter;
 import pk.calendar.controllers.CallendarController;
 import pk.calendar.models.data.Settings;
 
@@ -45,9 +47,6 @@ public class CalendarApp extends Application {
 
         stage.show();
 
-        Configurator.defaultConfig()
-                .writer(new FileWriter("log.txt"))
-                .level(Level.TRACE)
-                .activate();
+        Configurator.defaultConfig().writer(new FileWriter("log.txt")).level(Level.TRACE).activate();
     }
 }

@@ -23,8 +23,7 @@ class DateCellExt extends DateCell {
      */
     private void initalize() {
         setPrefHeight(200);
-        getStylesheets().add(getClass()
-                .getResource("/css/DateCellExt.css").toExternalForm());
+        getStylesheets().add(getClass().getResource("/css/DateCellExt.css").toExternalForm());
     }
 
     /**

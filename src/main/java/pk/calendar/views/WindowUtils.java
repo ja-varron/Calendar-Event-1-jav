@@ -33,8 +33,7 @@ public final class WindowUtils {
      * @return created Alert
      */
     public static Alert createAlert(String msg) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
-                msg, ButtonType.YES, ButtonType.NO);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, msg, ButtonType.YES, ButtonType.NO);
         alert.setHeaderText(null);
         alert.setTitle("Exit");
         Label img = new Label();

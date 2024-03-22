@@ -117,8 +117,7 @@ public class EventController {
                 DateEvent de = eventTable.getSelectionModel().getSelectedItem();
                 data.remove(de);
                 eventManager.deleteEvents(de);
-                Event.fireEvent(dc,
-                        new EventsChangedEvent(EventsChangedEvent.DELETED));
+                Event.fireEvent(dc, new EventsChangedEvent(EventsChangedEvent.DELETED));
             }
         }
     }
@@ -133,8 +132,7 @@ public class EventController {
         int hour = hourSpinner.getValue();
         int min = minSpinner.getValue();
         int secMinus = parseNotifySpinner(notifySpinner.getValue());
-        DateEvent newDateEvent =
-                new DateEvent(eventDate, hour, min, secMinus, place, desc);
+        DateEvent newDateEvent = new DateEvent(eventDate, hour, min, secMinus, place, desc);
         eventManager.addEvents(newDateEvent);
         data.add(newDateEvent);
         placeField.clear();
